@@ -66,3 +66,10 @@
 # End of https://www.gitignore.io/api/visualstudiocode,linux,c++
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+*
+!.gitattributes
+!.gitignore
+!readme.md
+!.gitkeep
+!*.cpp
+!*/
