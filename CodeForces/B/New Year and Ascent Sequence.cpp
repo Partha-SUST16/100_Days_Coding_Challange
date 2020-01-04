@@ -73,7 +73,7 @@ ll qpow(ll n, ll k)
     }
     return ans % mod;
 }
-const int N = 1e6 + 5;
+const int N = 1e6 + 7;
 int arr[N];
 
 int main(int argc, char const *argv[])
@@ -92,7 +92,7 @@ int main(int argc, char const *argv[])
 
         bool dec = 1;
         for (int j = 1; j < k; j++)
-            if (v[i - 1] < v[i])
+            if (v[j - 1] < v[j])
                 dec = 0;
         if (!dec)
             continue;
