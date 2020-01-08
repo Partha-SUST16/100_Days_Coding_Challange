@@ -66,26 +66,32 @@ bool isPrime(int n)
 {
     if (n == 1)
         return true;
-    for (int i = 2; i*i <= n; i++)
+    for (int i = 2; i * i <= n; i++)
         if (n % i == 0)
             return false;
     return true;
 }
 int main(int argc, char const *argv[])
 {
-    fast;
     int n;
     cin >> n;
+
     int extra = 0;
     while (!isPrime(n + extra))
         extra++;
-    cout << n + extra << endl;
 
+    cout << n + extra << endl;
     int k = n / 2;
-    for (int i = 1; i + 1 < n; i++)
-        cout << i + 1 << " " << i + 2 << endl;
+    for (int i = 0; i + 1 < n; i++)
+    {
+        cout << (i + 1) << " " << (i + 2) << endl;
+    }
     cout << 1 << " " << n << endl;
+
     for (int i = 0; i < extra; i++)
-        cout << i + 1 << " " << i + k + 1 << endl;
+    {
+        cout << (i + 1) << " " << (i + k + 1) << endl;
+    }
+
     return 0;
 }
