@@ -72,4 +72,5 @@
 !readme.md
 !.gitkeep
 !*.cpp
+!*.cs
 !*/
