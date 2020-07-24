@@ -56,7 +56,19 @@ using namespace std;
 const int N = (int)2e5 + 5;
 const int mod = 1000000007;
 //ll qpow(ll n,ll k) {ll ans=1;assert(k>=0);n%=mod;while(k>0){if(k&1) ans=(ans*n)%mod;n=(n*n)%mod;k>>=1;}return ans%mod;}
+/**
+Every minute in a clock is 6 degrees.
+So the angle of minute hand is directly min_angle=(minutes6)
+Every hour the hour hand goes 30 degress.
+So if the minute hand was at 0 then hour angle would be hr_angle=(hours30)
 
+Now for 360 degrees of minute hand, the hour hand goes 30 degrees.
+for 1 degree of minute hand, the hour hand goes 30/360 or 1/12 degrees.
+so for min_angle the hour hand will go min_angle*1/12 degree.
+So we add this to hr_angle
+Then we calculate the abs(he_angle-min_angle).
+If this is greater than 180 degrees then this is not the smallest angle so we subtract it from 360 degree.
+*/
 class Solution {
 public:
     double angleClock(int hour, int minutes) {
