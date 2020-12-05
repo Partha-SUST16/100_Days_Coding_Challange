@@ -116,8 +116,39 @@ void midPointCircleDraw(int x_centre, int y_centre, int r)
 // Driver code
 int main()
 {
-    // To draw a circle of radius 3 centred at (0, 0)
-    int x,y,r; cin >>x >> y >> r;
-    midPointCircleDraw(x,y,r);
+    double x,y,r;
+	cin>>x>>y;
+	double xx,yy;
+	xx = x;
+	yy = y;
+	cin>>r;
+	x = 0;
+	y = r;
+	double x1,y1;
+	double pk = 1 - r;
+	if(pk<0){
+		x1 = x + 1;
+		y1 = y;
+	}
+
+
+	while(1){
+		if(x1>y1)break;
+		cout<< x1 + xx << " "<<y1 + yy<<endl;
+
+		pk = pk + 2 * (x + 1) + (y1)*(y1) - y*y - y1 + y + 1;
+		x = x1;
+		y = y1;
+		if(pk<0){
+			x1 = x + 1;
+			y1 = y;
+
+		}
+		else{
+			x1 = x + 1;
+			y1 = y-1;
+
+		}
+	}
     return 0;
 }

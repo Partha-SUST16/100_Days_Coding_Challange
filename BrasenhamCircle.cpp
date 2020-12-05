@@ -75,7 +75,7 @@ void circlebres(float x1,float y1,float r)
         cout<<"X :"<<x1+y<<" Y :"<<y1-x<<endl;
         cout<<"X :"<<x1-y<<" Y :"<<y1+x<<endl;
         cout<<"X :"<<x1-y<<" Y: "<<y1-x<<endl; */
-        x=x+1;
+
         if(p<0)
         {
             p=p+4*(x)+6;
@@ -85,6 +85,7 @@ void circlebres(float x1,float y1,float r)
             p=p+4*(x-y)+10;
             y=y-1;
         }
+        x=x+1;
     }
 }
 int main()
